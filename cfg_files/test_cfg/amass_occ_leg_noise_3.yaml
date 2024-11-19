@@ -20,7 +20,7 @@ input_noise: True
 load_noise: True
 load_noise_level: 3
 
-batch_size: 64
+batch_size: 32  # reduced from 64 due to the memory problem.
 cond_fn_with_grad: True
 infill_traj: False
 traj_mask_ratio: 0.0
