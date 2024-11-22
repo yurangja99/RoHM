@@ -81,6 +81,9 @@ if __name__ == "__main__":
     elif args.mask_scheme == 'full':
         # default setup for tab.1 in the paper
         start = 65
+        # unconditional generation
+        if args.traj_mask_ratio == 1.0:
+            start = 0
         mask_len = int(args.traj_mask_ratio * 145)
         end = start + mask_len
         joints_mpjpe_global_vis = np.concatenate([joints_mpjpe_global[:, 0:start, ], joints_mpjpe_global[:, end:, ]], axis=1)

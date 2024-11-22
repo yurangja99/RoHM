@@ -13,4 +13,5 @@ __pycache__
 /README_old.md
 /init_motions_sample
 /preprocess_amass.sh
-/test_and_eval_amass.sh
+/test_and_eval.sh
+/init.sh

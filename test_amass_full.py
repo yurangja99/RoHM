@@ -222,6 +222,9 @@ def main(args):
             mask_len = int(args.traj_mask_ratio * 145)
             # default setup for tab.1 in the paper
             start = torch.ones([batch_size]).long() * 65
+            # unconditional generation
+            if args.traj_mask_ratio == 1.0:
+                start = torch.zeros([batch_size]).long()
             end = start + mask_len
             for bs in range(batch_size):
                 mask_traj[bs, start[bs]:end[bs]] = 0
